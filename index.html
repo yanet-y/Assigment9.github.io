@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 9</title>
+    <style>
+      :root {
+        --green: rgb(25, 143, 55);
+        --gray: lightgray;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .centered {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+      }
+
+      form {
+        width: 600px;
+        margin: 20px;
+        box-sizing: border-box;
+      }
+
+      .form-div {
+        width: 90%;
+        background-color: var(--gray);
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 2px;
+        border: none;
+        box-sizing: border-box;
+      }
+      select {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 2px;
+        border: none;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 50px;
+        background-color: var(--green);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button-container {
+        position: relative;
+        height: 60px;
+        margin-top: 30px;
+      }
+
+      .button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--green);
+        width: 150px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 30px;
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      p {
+        margin-left: 30px;
+      }
+      .drop {
+        position: relative;
+        background-color: var(--green);
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 0;
+        margin-left: 30px;
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+        color: white;
+      }
+      .div {
+        position: absolute;
+        top: 87%;
+        left: 250px;
+        width: 150px;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 260px;
+        background-color: var(--gray);
+        margin-left: 30px;
+      }
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style-type: none;
+      }
+      .drop:hover + .dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="centered">
+        <form>
+          <div class="form-div">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="Your name..."
+            />
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              placeholder="Your last name..."
+            />
+            <label for="country">Country</label>
+            <select name="country" id="">
+              <option value="ethiopia">Ethiopia</option>
+              <option value="france">France</option>
+              <option value="australia" selected>Australia</option>
+            </select>
+            <input type="submit" />
+          </div>
+        </form>
+
+        <div class="button-container">
+          <div class="button">Dropdown</div>
+          <p>this is a dropdown menu</p>
+        </div>
+        <div class="div">
+          <div class="drop">Dropdown</div>
+          <div id="dropdown" class="dropdown">
+            <ul>
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
